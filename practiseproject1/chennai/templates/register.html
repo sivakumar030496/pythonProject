@@ -1,0 +1,23 @@
+<html>
+<form action="/central/register/" method="POST">
+    {%csrf_token%}
+    <center>
+        <h2 style='color:blue'>Registration page</h2>
+        <table>
+            <tr>
+                <td>Uname:</td> <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>email:</td> <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+            <td>password:</td><td> <input type="password" name="password"></td>
+            </tr>
+            <tr>
+            <td>confirmpassword:</td><td> <input type="password" name="password1"></td>
+            </tr>
+        </table>
+        <input type="submit" value="register">
+    </center>
+</form>
+</html>

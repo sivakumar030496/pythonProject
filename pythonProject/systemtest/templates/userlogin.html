@@ -1,0 +1,136 @@
+<html>
+<head>
+    <title>login</title>
+    <style>
+                *{
+        margin:0;
+        padding:0;
+        }
+     body{
+     background:yellow;
+     font-family:tahoma;
+     }
+     h2{
+     background:red;
+     color:white;
+     }
+      form{
+        background:yellow;
+        border:2px solid blue;
+        width:30%;
+        align:center;
+        margin-left:35%;
+        border-radius:20px;
+        text-align:center;
+        height:200px;
+        border:none;
+        }
+        form:hover{
+          background:skyblue;
+
+
+        }
+        u{
+        color:blue;
+
+        }
+        h3{
+         margin-top:20px;
+        }
+        table{
+        color:blue;
+        font-size:20px;
+        }
+
+    .mine{
+       background:yellow;
+       color:blue;
+       text-align:center;
+       width:200px;
+       out-line:none;
+       height:25px;
+       border-radius:10px;
+       border:none;
+    }
+    .mine:hover{
+    background:white;
+    }
+    .none{
+     background:blue;
+	 color:white;
+
+	 padding:10px 90px 10px 90px;
+	 border-radius:20px;
+	 border:none;
+	 outline:none;
+	 font-size:20px;
+	 cursor:pointer;
+    }
+     .none:hover{
+	 background:red;
+	 }
+	 button{
+	 background:red;
+	 color:white;
+
+	 padding:10px 90px 10px 90px;
+	 border-radius:20px;
+	 border:none;p
+	 outline:none;
+	 font-size:20px;
+	 cursor:pointer;
+
+	 }
+	 button:hover{
+	 background:blue;
+	 }
+
+
+
+
+
+    </style>
+</head>
+<body>
+<center>
+    <h2>Log In For Better Experience</h2>
+    <hr/>
+</center>
+<br/><br/>
+
+<form action="/login/" method="POST">
+    {% csrf_token %}
+    <center>
+        <u><h3>Login Here</h3></u>
+        <table>
+            <tr>
+                <td>username:</td>
+                <td><input class="mine" name="username" placeholder="enter name here" type="text"></td>
+            </tr>
+            <br/>
+
+            <tr>
+                <td>Password:</td>
+                <td><input class="mine" name="password" placeholder="enter password here" type="password"></td>
+            </tr>
+        </table>
+        <br/>
+
+    </center>
+    <br/>
+
+    <button class="none" type="submit">Login</button>
+    <br> <br>
+    <br>{{comment}}<br/><br/>
+
+</form>
+
+
+</body>
+<center><br/><br/>
+    <a class="bt" href="/register/">
+        <button>Signup</button>
+    </a>
+
+</center>
+</html>

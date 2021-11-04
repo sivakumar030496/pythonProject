@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>index page</title>
+    <style>
+          </style>
+</head>
+<center>
+<body>
+<h1>Employee details table</h1><hr/><hr/><br/><br/>
+<table border="2px">
+    <tr>
+        <th>wrk_name</th>
+        <th>wrk_id</th>
+        <th>wrk_email</th>
+        <th>wrk_address</th>
+        <th>wrk_salary</th>
+
+    </tr>
+{% for i in emp_data %}
+    <tr>
+        <td>{{i.wrk_name}}</td>
+        <td>{{i.wrk_id}}</td>
+        <td>{{i.wrk_email}}</td>
+        <td>{{i.wrk_address}}</td>
+        <th>{{i.wrk_salary}}</th>
+
+<!--             <td>-->
+<!--             <a href="/shopingmall_data/edit/{{i.Name}}">Edit</a> &nbsp   <a href="/shopingmall_data/delete/{{i.Name}}"> Delete </a>-->
+<!--        </td>-->
+
+ <a href="/students/edit/{{i.id}}">edit</a> </td>
+        <td> <a href="/students/delete/{{i.id}}">delete</a> </td>
+        </tr>
+
+    {% endfor %}
+<!--      </table>-->
+<!--<form action="/students/queries/" method="POST">-->
+<!--        {% csrf_token %}-->
+<!--         <button type="submit">queries</button>-->
+<!--    </form>-->
+<center>
+    <form action="/central/logout/" method="POST">
+        {% csrf_token %}
+         <button type="submit">logout</button>
+    </form>
+
+</center>
+
+
+
+</body>
+</center>
+</html>
